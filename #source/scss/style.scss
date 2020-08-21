@@ -1,0 +1,588 @@
+@import "_header";
+@import "_footer";
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight:400;}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
+
+body{
+    background-color: #f4fcff;
+}
+
+.reading {
+    margin: 145px 0 0 0;
+    width: 100%;
+    @media (max-width: 1024px) {
+        margin: 100px 0 0 0;
+    }
+    @media (max-width: 920px) {
+        margin: 85px 0 0 0;
+    }
+    @media (max-width: 768px) {
+        margin: 60px 0 0 0;
+    }
+    @media (max-width: 610px) {
+        margin: 80px 0 0 0;
+    }
+    @media (max-width: 405px) {
+        margin: 125px 0 0 0;
+    }
+    &_container {
+        display: flex;
+        height: 490px;
+        max-width: 1190px;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+            padding: 0 20px;
+            align-items: flex-start;
+        }
+    }
+
+    &_content {
+        flex: 0 1 50%;
+        @media (max-width: 768px) {
+            flex: 0 1 100%;
+        }
+    }
+
+    &_image {
+        padding: 0 0 0 45px;
+        flex: 0 1 50%;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    &_real-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+    }
+    &_item {
+        max-width: 400px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 52px;
+        @media (max-width: 920px) {
+            font-size: 38px;
+        }
+        @media (max-width: 610px) {
+            font-size: 35px;
+            line-height: 41px;
+        }
+        @media (max-width: 405px) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
+    &_body {
+        padding: 35px 0 0 0;
+        max-width: 417px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        @media (max-width: 920px) {
+            font-size: 20px;
+            padding: 15px 0 0 0;
+        }
+    }
+
+    &_app {
+        margin: 48px 0 0 0; 
+        border: 2px solid #f8e587;
+        background: rgba(248, 229, 135, 0.75);
+        padding: 0 32.5px 0 17px;
+        transition-duration: 0.35s;
+        @media (max-width: 768px) {
+            background: rgba(248, 229, 135, 1);
+        }
+        @media (max-width: 920px) {
+            margin: 33px 0 0 0;
+        }
+    }
+
+.app_container-hidden{
+    @media (max-width: 414px) {
+        visibility: hidden;
+    }
+}
+
+    @media (min-width: 769px) {
+        .title_app:hover{
+            background-color: #f8e587;
+        }
+    }
+
+    &_sub-text {  
+        margin: 15px 0 0 0; 
+        max-width: 233px;
+        height: 14px;
+        color: #738091;
+        font-family: 'Nunito', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        @media (max-width: 920px) {
+            font-size: 13px;
+        }
+    }
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 31px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        transition-duration: 0.35s;
+        span{
+            color: #2f4b6e;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+}
+
+.app_container{
+    display: flex;
+    min-width: 236px;
+    align-items: center;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+    @media (max-width: 610px) {
+        order: 1;
+        }
+}
+
+.reading {
+    &_footer {
+        max-width: 1145px;
+        height: 61px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 200px auto 0 auto;
+        padding: 0 10px 0 10px;
+        @media (max-width: 768px) {
+            padding: 0 20px;
+            align-items: flex-start;
+            margin: -80px auto 0 auto;
+        }
+        @media (max-width: 610px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+        @media (max-width: 405px) {
+            margin: -105px auto 0 auto;
+        }
+    }
+}
+.wish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 610px) {
+        order: 2;
+        margin-top: 15px;
+        }
+    &_text {
+        max-width: 355px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        @media (max-width: 920px) {
+            font-size: 17px;
+            line-height: 28px;
+        }
+        @media (max-width: 610px) {
+            font-size: 15px;
+            line-height: 25px;
+        }
+        @media (max-width: 405px) {
+            font-size: 13px;
+            line-height: 22px;
+        }
+    }
+    &_icon{
+    max-width: 100%;
+    max-height: 53px;
+    margin: 0 30px 0 0;
+    object-fit: cover;
+    @media (max-width: 610px) {
+            margin: 0 20px 0 0;
+        }
+    }
+}
+@media (min-width: 769px) {
+    .telegram:hover{
+        border: 2px solid #d0dceb;
+        padding: 0 32.5px 0 32.5px;
+    }
+}
+
+.telegram{
+    @media (max-width: 320px) {
+        border: 2px solid #d0dceb;
+        padding: 0 32.5px 0 32.5px;
+    }
+}
+
+
+
+
+.library {
+    margin: 115px 0 0 0;
+    @media (max-width: 405px) {
+        margin: 85px 0 0 0;
+    }    
+    &_container {
+        max-width: 750px;
+        height: 475px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_title {
+        text-align: center;
+    }
+
+    &_title-item {
+        margin: 0 auto;
+        max-width: 505px;
+    }
+
+    &_title-body {
+        max-width: 580px;
+        padding: 25px 0 0 0;
+    }
+
+    &_benefits {
+        margin: 100px -17.5px 0 -17.5px;
+        display: flex;
+        align-items: center; 
+        justify-content: center;  
+        @media (max-width: 610px) {
+            flex-direction: column;
+        }    
+        @media (max-width: 405px) {
+            margin: 0;
+        }    
+    }
+}
+
+.benefits {
+    &_column {
+        flex: 0 1 33.333%;
+        height: 165px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0 35px;
+        @media (max-width: 610px) {
+            margin: 35px 0 0 0;
+            padding: 0;
+        }    
+    }
+
+    &_image {
+        flex: 1 1 auto;
+    }
+
+    &_real-image {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    &_subtitle {   
+        max-width: 178px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 30px;
+        @media (max-width: 920px) {
+            font-size: 17px;
+            line-height: 27px;
+        }
+    }
+}
+
+.benefits_last-column{
+    margin: 0;
+    @media (max-width: 610px) {
+        margin: 35px 0 0 0;
+    }
+}
+
+.blocks {
+    margin: 255px 0 0 0;
+    @media (max-width: 768px) {
+        margin: 150px 0 0 0;
+    }
+    @media (max-width: 610px) {
+        margin: 550px 0 0 0;
+    }  
+    &_container-1, &_container-2 {
+        max-width: 1145px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_block {
+        display: flex;
+        margin: 0 -15px;
+        align-items: center;
+    }
+    &_block-22 {
+        order: 1;
+        @media (max-width: 405px) {
+            margin: -40px 0 0 0;
+        }
+    }
+    &_block-21 {
+        order: 2;
+        margin: 50px 0 0 0;
+        @media (max-width: 405px) {
+            display: none;
+        }
+    }
+}
+.block {
+    &_column {
+        flex: 0 1 50%;
+        padding: 0 15px;
+        @media (max-width: 610px) {
+            margin: 0 -10px;
+        }
+    }
+
+    &_content{
+        @media (max-width: 610px) {
+            text-align: center;
+            padding: 0 10px;
+            margin: 40px 0 0 0;
+        }
+    }
+
+    &_title {
+        max-width: 425px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 52px;
+        @media (max-width: 920px) {
+            font-size: 38px;
+        }
+        @media (max-width: 610px) {
+            font-size: 35px;
+            line-height: 41px;
+        }
+        @media (max-width: 405px) {
+            font-size: 30px;
+            line-height: 40px;
+        }
+    }
+
+    &_text {
+        max-width: 398px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        margin: 30px 0 0 0;
+        @media (max-width: 920px) {
+            font-size: 20px;
+            padding: 15px 0 0 0;
+        }
+        @media (max-width: 768px) {
+            margin: 10px 0 0 0;
+        }
+    }
+
+    &_real-image {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 610px) {
+    .blocks_container-1{
+        display: none;
+    }
+    .blocks_block-22{
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 611px) {
+    .blocks_container-2{
+        display: none;
+    }
+}
+
+.page-3 {
+    background-color: #f8e587;
+}
+.reviews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	&_content { 
+        @media (max-width: 1024px) {
+            margin: 50px 0 0 0;
+            padding: 50px 0;
+        }
+        @media (max-width: 405px) {
+            margin: 0;
+            padding: 50px 0;
+        }
+	}
+
+	&_container {
+        max-width: 520px;
+        padding: 0 10px 8px 10px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 550px;
+        @media (max-width: 1024px) {
+            height: auto;
+        }
+	}
+
+	&_icons {
+        position: absolute;
+        margin: 0 auto 0 auto;
+        @media (max-width: 1024px) {
+            display: none;
+        }
+	}
+
+	&_icon {
+        max-width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 769px) {
+    .messanger:hover{
+        border: 2px solid #2f4b6e;
+        padding: 0 32.5px 0 32.5px;
+    }
+}
+
+.messanger{
+    margin: 44px 0 0 0;
+    @media (max-width: 768px) {
+        border: 2px solid #2f4b6e;
+        padding: 0 32.5px 0 32.5px;
+    }
+}
+
+.say-hi {
+    margin: 150px 0 0 0;
+    @media (max-width: 1024px) {
+        margin: 100px 0 0 0;
+    }
+    @media (max-width: 405px) {
+        margin: 70px 0 0 0;
+    }
+	&_container {
+        max-width: 420px;
+        padding: 0 10px 0 10px;
+        margin: 0 auto;
+    }
+}
+
+.say-hi_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.page-4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_picture {
+        margin: 80px 0 0 0;
+    }
+
+    &_img {
+        object-fit: cover;
+        max-width: 100%;
+    }
+}
+
+.app_container-center{
+    min-width: 0px;
+}

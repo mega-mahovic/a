@@ -1,0 +1,125 @@
+.header {
+    position: relative;
+    padding: 35px 0 0 0;
+    width: 100%;
+    @media (max-width: 1024px) {
+        padding: 20px 0 0 0;
+    }
+    @media (max-width: 768px) {
+        padding: 15px 0 0 0;
+    }
+    &_container {
+        max-width: 1130px;
+        height: 45px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        @media (max-width: 768px) {
+            padding: 0 20px;
+        }
+    }
+    &_column {
+        flex: 0 1 auto;
+    }
+    &_logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &_contacts {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.logo {
+    &_image {
+        flex: 0 0 37px;
+        margin: 0 8px 0 0;
+        max-width: 100%;
+        @media (max-width: 320px) {
+            margin: 0 5px 0 0;
+        }
+    }
+    &_text {
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+    }
+}
+.contacts {
+    &_telegram {
+        @media (max-width: 405px) {
+            margin: 15px 0 0 0;
+        }
+        @media (max-width: 610px) {
+            margin: 15px 0 0 0;
+        }
+    }
+    &_app {
+        border: 2px solid #f8e587;
+        background: rgba(248, 229, 135, 0.75);
+        margin: 0 0 0 35px;
+        padding: 0 32.5px 0 17px;
+        transition-duration: 0.35s;
+        @media (max-width: 768px) {
+            background: rgba(248, 229, 135, 1);
+        }
+    }
+}
+.app {
+    &_icon{
+        margin: -3px 0 0 0;
+    }
+    &_text{
+        padding: 0 0 0 25px;
+        color: #2f4b6e;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 610px){
+    .contacts{
+        &_telegram{
+            order: 2;
+        }
+        &_app {
+            order: 1;
+            margin: 0;
+        }
+    }
+    .header_contacts{
+        flex-direction: column;
+        margin-top: 65px;
+    }
+}
+
+@media (max-width: 405px){
+    .header_container{
+        flex-direction: column;
+    }
+    .header_contacts{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 769px) {
+    .contacts_telegram:hover{
+        border: 2px solid #d0dceb;
+        padding: 0 32.5px 0 32.5px;
+    }
+    .contacts_app:hover{
+        background-color: #f8e587;
+    }
+}
+
